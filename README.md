@@ -21,7 +21,9 @@
 * скомпилировать основной документ `.tex` через Pdflatex 
 * скомпилировать библиографию, запустив `*.tex` через `BiBtex`
 * опять скомпилировать основной документ через Pdflatex
+В файле `example_bibliography.bib` приведены примеры для оформления источников в виде статей, книг, электронных ресурсов
 
+## Работа с репозиторием
 Для работы с репозиторием можно его либо форкнуть, либо склонировать командой:
 `git clone https://github.com/Jasstkn/template`
 
@@ -32,7 +34,7 @@
 * Документация по [библиографии](https://ru.sharelatex.com/learn/Bibliography_management_in_LaTeX)
 * Документация по оформлению кода через [minted](https://ru.sharelatex.com/learn/Code_Highlighting_with_minted)
 
-## Проверно с:
+## Работает на:
 * Texmaker 4.4.1 on Ubuntu 16.04
 * Sharelatex (online)
 
