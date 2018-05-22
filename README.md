@@ -11,9 +11,7 @@
 Для работы в редакторах кода типа Texmaker, TexStudio и др. необходимо добавить в `Options -> Configure Texmaker` для PDFlatex `-shell-escape` (для работы пакета `minted`, отвечающего за оформлению листингов с кодом). Таким образом команда должна выглядеть так:
 
 `pdflatex -interaction=nonstopmode -shell-escape %.tex` 
-
 ![Configure Texmaker](/other/1.png)
-
 ## Работа с библиографией <h2>
 В онлайн редакторе sharelatex.com библиография автоматически компилируется и дополнительных действий не требуется.
 
