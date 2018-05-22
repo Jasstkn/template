@@ -13,6 +13,5 @@
 
 `pdflatex -interaction=nonstopmode -shell-escape %.tex` 
 
-![Configure Texmaker][/other/1.png]
-Format: ![Alt Text](url)
+![Configure Texmaker](/other/1.png)
 
