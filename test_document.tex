@@ -1,0 +1,85 @@
+%%% Здесь выбираются необходимые графы
+\documentclass[russian, utf8, columnxxvi, hpadding=5mm, floatsection, equationsection, footnoteasterisk]{eskdtext}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\newcommand*{\No}{\textnumero}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tocloft}
+
+%%% Ставим подпись к рисункам. Вместо «рис. 1» будет «Рисунок 1»
+\addto{\captionsrussian}{\renewcommand{\figurename}{Рисунок}}
+
+%Сложные формулы
+\usepackage{amsmath}
+
+%Формулы на русском
+\usepackage{mathtext}
+
+%Умная запятая
+\usepackage{icomma}
+% Автоматически переносить на след. строку слова которые не убираются
+% в строке
+\sloppy
+
+%%% Для вставки рисунков
+\usepackage{graphicx}  % Для вставки рисунков
+\graphicspath{{images/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков текстом
+
+%%% Для вставки интернет ссылок, полезно в библиографии
+\usepackage{url}
+
+%%% Подподразделы(\subsubsection) не выводим в содержании
+\setcounter{tocdepth}{2}
+
+%%% Каждый раздел (\section) с новой страницы
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+\renewcommand{\ESKDfontVsize}{\fontsize{15pt}{12pt}}
+\renewcommand{\ESKDfontIIIsize}{\fontsize{8pt}{12pt}}
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+\usepackage{extsizes} % Большие шрифты
+\usepackage{upgreek} % Подключение греческого алфавита командами
+
+%Include code package
+\usepackage{minted}
+
+%Rename listing caption
+\renewcommand\listingscaption{Листинг} 
+
+%%% ESKDX %%%
+
+%%% Название документа
+\ESKDdocName{\small Управление актуатором сигналами нервной системы в устройстве двигательного протезирования \\ Пояснительная записка}
+
+\ESKDauthor{\tiny Котляревская\,М.\,В.}
+\ESKDchecker{Жиленков\,А.\,А.}
+\ESKDnormContr{Ведяков\,А.\,А.}
+\ESKDapprovedBy{Бобцов\,А.\,А.}
+
+\ESKDtitleDesignedBy{Автор выпускной квалификационной работы }{ Котляревская М.В. }
+\ESKDtitleAgreedBy{Руководитель}{ Жиленков А.А. }
+
+\ESKDdepartment{Кафедра Систем Управления и Информатики}
+\ESKDcompany{Университет ИТМО}
+\ESKDsignature{ КСУИ.106.3435.001 ПЗ }
+\ESKDcolumnXXV{КСУИ.106.3435.001 ПЗ}
+\ESKDcolumnIX{\small Университет ИТМО\\
+КСУиИ, гр. P3435}
+\ESKDgroup{\footnotesize Университет ИТМО\\\scriptsize Кафедра систем управления и информатики}
+\ESKDdate{ 2018/04/12 }
+\ESKDsectSkip{section}{7mm}{7mm}
+\ESKDsectSkip{subsection}{5mm}{5mm}
+
+\ESKDputOnStyle{formIIab}{columnxxvi}{\ESKDdrawColumnXXVI}
+\ESKDsectStyle{section}{\Large\bfseries}
+\ESKDsectSkip{section}{8pt}{10pt}
+\ESKDsectSkip{subsection}{8pt}{8pt}

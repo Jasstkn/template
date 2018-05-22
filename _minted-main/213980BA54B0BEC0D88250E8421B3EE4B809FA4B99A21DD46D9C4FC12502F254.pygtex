@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}include russian language support}
+\PYG{k+kn}{import} \PYG{n+nn}{sys}
+\PYG{n+nb}{reload}\PYG{p}{(}\PYG{n}{sys}\PYG{p}{)}
+\PYG{n}{sys}\PYG{o}{.}\PYG{n}{setdefaultencoding}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}include required libraries}
+\PYG{k+kn}{from} \PYG{n+nn}{numpy} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{from} \PYG{n+nn}{pylab} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{c+c1}{\PYGZsh{} setup parameters and state variables}
+\PYG{n}{T}       \PYG{o}{=} \PYG{l+m+mi}{60}                  
+\PYG{n}{dt}      \PYG{o}{=} \PYG{l+m+mi}{1}               	  
+\PYG{n}{time}    \PYG{o}{=} \PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{T}\PYG{o}{+}\PYG{n}{dt}\PYG{p}{,} \PYG{n}{dt}\PYG{p}{)} 
+\PYG{n}{t\PYGZus{}rest}  \PYG{o}{=} \PYG{l+m+mi}{0}                                   
+\PYG{c+c1}{\PYGZsh{} iterate over each time step}
+\PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{t} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{time}\PYG{p}{):} 
+  \PYG{k}{if} \PYG{n}{t} \PYG{o}{\PYGZgt{}} \PYG{n}{t\PYGZus{}rest}\PYG{p}{:}
+	\PYG{n}{Vm}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{Vm}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{Vm}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{n}{I}\PYG{o}{*}\PYG{n}{Rm}\PYG{p}{)} \PYG{o}{/} \PYG{n}{tau\PYGZus{}m} \PYG{o}{*} \PYG{n}{dt}
+	\PYG{k}{if} \PYG{n}{Vm}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZgt{}=} \PYG{n}{Vth}\PYG{p}{:}
+	  \PYG{n}{Vm}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{V\PYGZus{}spike}
+	  \PYG{n}{t\PYGZus{}rest} \PYG{o}{=} \PYG{n}{t} \PYG{o}{+} \PYG{n}{tau\PYGZus{}ref}
+\end{Verbatim}
